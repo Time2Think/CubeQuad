@@ -18,6 +18,7 @@ namespace BootstrapScene
 
         private void Start()
         {
+            Application.targetFrameRate = 60;
             _sliderLoading.maxValue = 100;
             StartCoroutine(UpdateSlider());
         }

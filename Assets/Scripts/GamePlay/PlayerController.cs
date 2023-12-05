@@ -18,7 +18,7 @@ namespace GamePlay
         private float _sensitivity = 1f;
         [SerializeField] 
         private SplineFollower _splineFollower;
-    
+        [SerializeField] 
         private Animator _animator;
         private HashStringToInt _hashAnimation;
         private bool _isSwiping = false;
@@ -33,8 +33,9 @@ namespace GamePlay
 
         private void Awake()
         {
-            _animator = gameObject.GetComponent<Animator>();
             _splineFollower.follow = false;
+            Debug.Log("Awake _animator= " + _animator);
+            Debug.Log("Awake_splineFollower = " + _splineFollower.follow);
         }
 
    
@@ -46,19 +47,23 @@ namespace GamePlay
 
         public void StartIdle()
         {
+            Debug.Log("StartIdle_animator = " + _animator);
             gameObject.transform.localRotation = new Quaternion(0f, 0f, 0f,0f);
             _animator.StopPlayback();
             _animator.CrossFade(_hashAnimation.Idle,0.1f);
             _animator.Play(_hashAnimation.Idle);
             _splineFollower.follow = false;
+            Debug.Log("StartIdle_splineFollower = " + _splineFollower.follow);
         }
         
         public void StartRun()
         {
+            Debug.Log("StartRun_animator = " + _animator);
             _animator.StopPlayback();
             _animator.CrossFade(_hashAnimation.Run,0.1f);
             _animator.Play(_hashAnimation.Run);
             _splineFollower.follow = true;
+            Debug.Log("StartIdle_splineFollower = " + _splineFollower.follow);
         }
         
         public void StartDie()

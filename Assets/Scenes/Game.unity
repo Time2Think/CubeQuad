@@ -3851,6 +3851,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 456282287153114971, guid: f916152b6d8434eada8788b0c964c684, type: 3}
   m_PrefabInstance: {fileID: 4120605118698835326}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &543450652854712270 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5929679119192059412, guid: f916152b6d8434eada8788b0c964c684, type: 3}
+  m_PrefabInstance: {fileID: 4120605118698835326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &645716103396494270
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3962,6 +3967,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4198911888799653504, guid: f916152b6d8434eada8788b0c964c684, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 543450652854712270}
     - target: {fileID: 4198911888799653504, guid: f916152b6d8434eada8788b0c964c684, type: 3}
       propertyPath: _splineFollower
       value: 
