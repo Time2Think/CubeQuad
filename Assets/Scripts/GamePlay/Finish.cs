@@ -11,7 +11,6 @@ namespace GamePlay
             {
                 PlayerController player = other.GetComponent<PlayerController>();
                 player.StartDance();
-                Debug.Log("Win");
             }
         }
     }

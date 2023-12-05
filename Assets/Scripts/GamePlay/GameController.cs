@@ -31,8 +31,6 @@ public class GameController : MonoBehaviour
     {
         _playerController = _splineFollower.GetComponentInChildren<PlayerController>();
         _presentLevel = _progressManager.LoadProgress();
-        Debug.Log("_playerController = " + _playerController);
-        Debug.Log("_presentLevel= " + _presentLevel);
         _uiManager.InitUI();
         InitLevel();
         Subscribe();
@@ -75,7 +73,6 @@ public class GameController : MonoBehaviour
     
     private void StartLevel()
     {
-        Debug.Log("StartLevel_playerController = " + _playerController);
         _playerController.StartRun();
     }
 
